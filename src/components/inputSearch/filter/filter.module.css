@@ -1,0 +1,93 @@
+.parentFilter {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 100%;
+}
+.filter {
+  width: 100%;
+  height: max-content;
+  max-height: 0;
+  transition: 1s all;
+  background-color: #282c34;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  transform: translate(calc(-50% - 8px), 0);
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
+  border: transparent;
+  border-radius: 0 0 20px 20px;
+}
+
+.toggle .arrow {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns='http://www.w3.org/2000/svg' xmlns:cc='http://web.resource.org/cc/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:sodipodi='http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:svg='http://www.w3.org/2000/svg' xmlns:ns1='http://sozi.baierouge.fr' xmlns:xlink='http://www.w3.org/1999/xlink' id='svg3682' sodipodi:docname='AIGA_Down_Arrow_1.svg' viewBox='0 0 360.61 431.32' sodipodi:version='0.32' inkscape:version='0.41' sodipodi:docbase='/datas/Projs/Cliparts Stocker/tmp/AIGA' %3E%3Csodipodi:namedview id='base' bordercolor='red' inkscape:pageshadow='2' inkscape:window-width='640' pagecolor='red' inkscape:zoom='0.43415836' inkscape:window-x='5' borderopacity='1.0' inkscape:current-layer='svg3682' inkscape:cx='305.25953' inkscape:cy='417.84947' inkscape:window-y='70' inkscape:window-height='543' inkscape:pageopacity='0.0' /%3E%3Cg id='g3692' %3E%3Cpath id='path3694' style='fill:rgb(255, 152, 0)' d='m360.4 251.12l-180.2 180.2-180.2-180.2v-118.85l137.07 137.06v-269.33l87.22 0.000099182v268.38l136.32-136.32-0.21 119.06z' /%3E%3C/g %3E%3Cmetadata %3E%3Crdf:RDF %3E%3Ccc:Work %3E%3Cdc:format %3Eimage/svg+xml%3C/dc:format %3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3Ccc:license rdf:resource='http://creativecommons.org/licenses/publicdomain/' /%3E%3Cdc:publisher %3E%3Ccc:Agent rdf:about='http://openclipart.org/' %3E%3Cdc:title %3EOpenclipart%3C/dc:title %3E%3C/cc:Agent %3E%3C/dc:publisher %3E%3Cdc:title %3Eaiga down arrow%3C/dc:title %3E%3Cdc:date %3E2009-06-20T14:57:44%3C/dc:date %3E%3Cdc:description %3ESet of international airport symbols. Source: http://www.aiga.org/content.cfm/symbol-signs Converted to SVG by Jean-Victor Balin.%3C/dc:description %3E%3Cdc:source %3Ehttps://openclipart.org/detail/26741/aiga-down-arrow-by-anonymous%3C/dc:source %3E%3Cdc:creator %3E%3Ccc:Agent %3E%3Cdc:title %3EAnonymous%3C/dc:title %3E%3C/cc:Agent %3E%3C/dc:creator %3E%3Cdc:subject %3E%3Crdf:Bag %3E%3Crdf:li %3Eaiga%3C/rdf:li %3E%3Crdf:li %3Eaiga no bg%3C/rdf:li %3E%3Crdf:li %3Earrow%3C/rdf:li %3E%3Crdf:li %3Eexternalsource%3C/rdf:li %3E%3Crdf:li %3Emap symbol%3C/rdf:li %3E%3Crdf:li %3Esign%3C/rdf:li %3E%3Crdf:li %3Esilhouette%3C/rdf:li %3E%3Crdf:li %3Esymbol%3C/rdf:li %3E%3C/rdf:Bag %3E%3C/dc:subject %3E%3C/cc:Work %3E%3Ccc:License rdf:about='http://creativecommons.org/licenses/publicdomain/' %3E%3Ccc:permits rdf:resource='http://creativecommons.org/ns%23Reproduction' /%3E%3Ccc:permits rdf:resource='http://creativecommons.org/ns%23Distribution' /%3E%3Ccc:permits rdf:resource='http://creativecommons.org/ns%23DerivativeWorks' /%3E%3C/cc:License %3E%3C/rdf:RDF %3E%3C/metadata %3E%3C/svg%0A%3E%0A");
+  width: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 30px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 400ms all;
+}
+
+.toggle:hover .arrow {
+  transform: translate(0, 2px);
+}
+
+.filter .block {
+  width: 33%;
+  margin-top: 36px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  max-height: 500px;
+  transition: 2s all;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter .block button {
+  width: max-content;
+  height: max-content;
+
+  padding: 10px 38px;
+  border: 2px solid white;
+  margin: 5px 5px;
+  cursor: pointer;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  transition: 400ms all;
+}
+
+.filter .block button:hover {
+  background-color: black;
+  color: aqua;
+}
+
+.active {
+  background-color: black !important;
+  color: aqua !important;
+}
+
+.type {
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  font-size: 36px;
+  transition: 400ms all;
+  color: white;
+  overflow: hidden;
+}

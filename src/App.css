@@ -1,0 +1,56 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+input {
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  z-index: 1;
+}
+
+header input {
+  margin-top: 20px;
+  width: 80%;
+  height: 30%;
+  font-size: 20px;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid black;
+}
+
+header input::placeholder {
+  font-style: italic;
+}
+
+h1 {
+  color: white;
+  font-size: 72px;
+}
